@@ -13,10 +13,10 @@
 let Widget = function(remoteStorage, options={}) {
   this.rs = remoteStorage;
 
-  this.leaveOpen      = options.leaveOpen ? options.leaveOpen : false;
-  this.autoCloseAfter = options.autoCloseAfter ? options.autoCloseAfter : 1500;
-  this.skipInitial    = options.skipInitial ? options.skipInitial : false;
-  this.logging        = options.logging ? options.logging : false;
+  this.leaveOpen      = false;
+  this.autoCloseAfter = 1500;
+  this.skipInitial    = false;
+  this.logging        = false;
 
   if (options.hasOwnProperty('modalBackdrop')) {
     if (typeof options.modalBackdrop !== 'boolean' && options.modalBackdrop !== 'onlySmallScreens') {
